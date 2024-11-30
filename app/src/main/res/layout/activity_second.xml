@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".SecondActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_movie_app"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/background_header"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/logo_movie_header"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_keyboard_arrow_left_24"
+            />
+
+        <TextView
+            android:id="@+id/text_movie_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Detail"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#383838"
+            app:layout_constraintTop_toTopOf="@id/logo_movie_header"
+            app:layout_constraintBottom_toBottomOf="@id/logo_movie_header"
+            app:layout_constraintStart_toEndOf="@id/logo_movie_header"
+            android:layout_marginLeft="15dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/header_movie_app"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/venom"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/titleTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/imageView"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        android:layout_marginLeft="40dp"
+        android:textStyle="bold"
+        android:text="ahdpuwahdhpidoaid" />
+    <TextView
+        android:id="@+id/genreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/titleTextview"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:text="ahdpuwahdhpidoaid" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/durationTextView"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:padding="0dp"
+        android:text="1 h 49m"
+        android:textSize="8sp"
+
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:backgroundTint="#D9D9D9"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/radius_corner_btn_item_movie"
+        app:layout_constraintTop_toBottomOf="@id/genreTextView"
+        app:layout_constraintStart_toStartOf="@id/genreTextView"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ratingTextView"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:padding="0dp"
+        android:text="1 h 49m"
+        android:textSize="8sp"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:backgroundTint="#D9D9D9"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/radius_corner_btn_item_movie"
+        app:layout_constraintTop_toTopOf="@id/durationTextView"
+        app:layout_constraintStart_toEndOf="@id/durationTextView"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txt_sysnopsis"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Synopsis"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        android:layout_marginTop="30dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_sysnopsis"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="30dp"/>
+    <TextView
+        android:id="@+id/descTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txt_sysnopsis"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:text="aaaaaaaaaaaaaa" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/radius_corner_btn_item_movie"
+        android:text="book film now"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

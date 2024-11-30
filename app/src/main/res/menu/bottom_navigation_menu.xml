@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/baseline_home_filled_24"
+        android:title="Home" />
+    <item
+        android:id="@+id/movieListFragment"
+        android:icon="@drawable/icon_list"
+        android:title="Movie List" />
+    <item
+        android:id="@+id/promoFragment"
+        android:icon="@drawable/baseline_percent_24"
+        android:title="Promo" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/baseline_profile_24"
+        android:title="Profile" />
+</menu>

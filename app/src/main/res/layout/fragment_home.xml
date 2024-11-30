@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    tools:context=".homeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_movie_app"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/background_header"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/logo_movie_header"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo_movie_header"
+            />
+
+        <TextView
+            android:id="@+id/text_movie_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie APP"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#383838"
+            app:layout_constraintTop_toTopOf="@id/logo_movie_header"
+            app:layout_constraintBottom_toBottomOf="@id/logo_movie_header"
+            app:layout_constraintStart_toEndOf="@id/logo_movie_header"
+            android:layout_marginLeft="15dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@id/header_movie_app"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_ask_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What do you want to do now, User ?"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
+                />
+            
+            <LinearLayout
+                android:id="@+id/circle_icons_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txt_ask_user"
+                app:layout_constraintStart_toStartOf="@id/txt_ask_user">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/circle_movie_icon" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/circle_food_icon" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/circle_cinema_icon" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/circle_private_icon" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/text_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/circle_icons_container"
+                app:layout_constraintStart_toStartOf="@id/circle_icons_container"
+                app:layout_constraintEnd_toEndOf="@id/circle_icons_container">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="movie"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Food"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="10dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="cinema"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="52dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="private booking"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_our_hottest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/text_container"
+                app:layout_constraintStart_toStartOf="@id/txt_ask_user"
+                android:layout_marginTop="5dp"
+                android:text="Our Hottest Movie"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/txt_see_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/text_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="40dp"
+                android:text="See more"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/txt_see_more"
+                app:layout_constraintStart_toStartOf="@id/txt_our_hottest"
+                app:layout_constraintTop_toBottomOf="@id/txt_our_hottest"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:listitem="@layout/item_movie"
+                tools:itemCount="4"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
